@@ -29,11 +29,11 @@ public class SFTPExceptionCheck
 	public ArrayList<SFTPParam> DeleteFilesSFTP(String SFTPHOST, int SFTPPORT, String SFTPUSER, String SFTPPASS, String Path, String LocationType, int RetainDays, int MinFiles, String FileName) {
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 	/*
-	 * This is just a Dummy Class this will check for Exception ie. if We enter wrong directory which 
+	 * This is just a Dummy Class it will check for Exception ie. if We enter wrong directory which 
 	 * is not present in sftp server or wrong server Id which is not present in Value mapping table.
-	 * This class is created because if we maintain wrong directory in second sequence in table ZCA_SFTP_HSEKP table in ECC
-	 * it deletes all files from first directory and but no response is sent back to ECC because 
-	 * there is an exception raised from this class and it terminates in Mapping 	
+	 * Also, if we maintain wrong directory in second sequence of the table in ECC
+	 * it will delete all the files from first(1st sequence) directory but no response will be sent back to ECC because 
+	 * Of the exception raised from this class and it will terminates as an error in Mapping 	
 	 */
 		ArrayList<SFTPParam> filesDeleted = new ArrayList<SFTPParam>();
 		try {
